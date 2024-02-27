@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web to Lead</title>
     <script src="script.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -31,6 +32,12 @@
         type="text"
         required="true"
       /><br />
+
+      <input
+        type="hidden"
+        name="captcha_settings"
+        value='{"keyname":"WebToLead","fallback":"true","orgId":"00Dan000000GSV0","ts":""}'
+      />
 
       <label for="last_name">Last Name</label
       ><input
@@ -120,6 +127,11 @@
           size="12"
           type="text" /></span
       ><br /> -->
+      <div
+        class="g-recaptcha"
+        data-sitekey="6LfmQoIpAAAAAPtoPlMB4crF8mR202GIcVhC04iA"
+      ></div>
+      <br />
 
       <input type="submit" name="submit" class="submit-btn" />
     </form>
